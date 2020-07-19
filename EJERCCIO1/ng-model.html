@@ -1,0 +1,46 @@
+<html ng-app>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="./js/lib/angular.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>ng-model</h1>
+        <small>en AngularJs</small>
+        <hr>
+        <p>Su nombre: {{nombre | uppercase}}
+            <br>
+            <input type="text" ng-model="nombre" class="form-control" placeholder="Ingrese su nombre">
+        </p>
+        <p>
+            Seleccione el pais: {{ pais }}
+            <select class="form-control" ng-model="pais">
+                <option value="1">Ecuador</option>
+                <option value="2">Colombia</option>
+                <option value="3">Peru</option>
+            </select>
+        </p>
+        <p>
+            Seleccione una opción:{{opt1}} {{opt2}} {{opt3}}
+            <br>
+            <input type="checkbox"  ng-model="opt1">opción 1
+            <br>
+            <input type="checkbox"  ng-model="opt2">opción 2
+            <br>
+            <input type="checkbox"  ng-model="opt3">opción 3
+        </p>
+        <p>
+            Seleccione una genero:{{genero}}
+            <br>
+            <input type="radio"  value="M" ng-model="genero">Masculino
+            <br>
+            <input type="radio"  value="F" ng-model="genero">Femenino
+        </p>
+    </div>
+    
+</body>
+</html>

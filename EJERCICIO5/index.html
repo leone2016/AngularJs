@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html ng-app="universidadApp">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Filtros - ng-repeat</title>
+
+
+    <!-- Incluir Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="css/animate.css">
+
+    <!-- Incluir AngularJS -->
+    <script src="js/lib/angular.min.js"></script>
+
+    <script src="js/app.js"></script>
+
+    <style>
+        .avatar {
+            width: 75px;
+            height: 75px;
+        }
+        .puntero{
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container" ng-controller="listadoCtrl">
+
+        <h1>ng-options</h1>
+        <h4>Para el ng-repeat</h4>
+        <hr>
+        <b>[ng-repeat]</b> Selección del pais:{{ paisSeleccionado }}
+        <select  ng-model="paisSeleccionado" class="form-control"  >
+            <option value="">Seleccione</option>
+            <option ng-repeat="pais in paises track by $index" value="{{ pais.id }}">{{ pais.nombre }}</option>
+
+        </select>
+        <br>
+        <b>[ng-option]</b> Selección del pais:{{ paisSeleccionado }}
+        <select ng-model="paisSeleccionado" class="form-control" ng-options="pais.id as pais.nombre for pais in paises"  >
+            <option value="">Seleccione</option>
+
+        </select>
+
+
+
+
+
+
+
+    </div>
+    <!-- fin del listadoCtrl -->
+
+</body>
+
+</html>

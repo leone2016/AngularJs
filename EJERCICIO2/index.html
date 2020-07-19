@@ -1,0 +1,72 @@
+<html ng-app="universidadApp">
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+    <script src="./js/lib/angular.min.js"></script>
+    <script src="./js/app.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container" ng-controller="profesorCtrl">
+        <h1>Profesor</h1>
+        <h4>{{profesor.nombre}}</h4>
+        <hr>
+
+        <div class="row">
+
+            <!-- Div que contiene la imagen del profesor -->
+            <div class="col-sm-3">
+                <section class="panel">
+                    <div class="panel-body" align="center">
+                        <img ng-src="{{profesor.foto}}" class="img-circle" alt="" width="150px" height="150px"
+                            style="border-radius: rem;">
+                    </div>
+                </section>
+            </div>
+
+            <!-- Div, donde se mostrará la bio del profesor -->
+            <div class="col-sm-9">
+                <section class="panel">
+                    <div class="panel-body">
+                        {{profesor.bio}}
+                        <br>
+                        <br>
+                        <strong>Edad:</strong> {{profesor.edad}} años
+                        <br>
+                        <button class="btn btn-primary" ng-click="EditarProfesor()">Editar</button>
+                    </div>
+                </section>
+            </div>
+
+
+        </div>
+        <hr>
+        <br>
+        <div class="row animate__animated animate__fadeInDown" ng-show="mostrarCaja">
+            <div class="col-sm-9">
+                <section class="panel">
+                    <div class="panel-body">
+                        Nombre:
+                        <input type="text" class="form-control" ng-model="editando.nombre">
+                        <br>
+                        Edad:
+                        <input type="text" class="form-control" ng-model="editando.edad">
+                        Bio:
+                        <textarea class="form-control" row="10" ng-model="editando.bio"></textarea>
+                        <br>
+                        <button class="btn btn-primary" ng-click="GuardarCambios()">Guardar</button>
+                        <button class="btn btn-danger" ng-click="CancelarCambios()">Cancelar</button>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

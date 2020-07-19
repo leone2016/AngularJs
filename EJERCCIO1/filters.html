@@ -1,0 +1,33 @@
+<html ng-app>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="./js/lib/angular.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Filtros :: Filters</h1>
+        <small>en AngularJs</small>
+        <hr/>
+        <p>Filtro de texto {{'LeonardoM'}}</p>
+        <hr/>
+        <p>Filtro de Uppercase:  {{'LeonardoM' | uppercase}}</p>
+        <hr/>
+        <p>Filtro de LowerCase:  {{'LeonardoM' | lowercase }}</p>
+        <hr>
+        <p>Filtro de moneda: {{ 1350 }}</p>
+        <br>
+        <p> Filtro de moneda: {{ 1350 | currency }}</p>
+        <br>
+        <p> Filtro de moneda: {{ 1350 | currency:'Col.' }}</p>
+        <br>
+        <p> Filtro de moneda: {{ 1350 | currency:'' }}</p>
+        <br>
+        <p> Filtro de Número : {{ 135000000 | number }}</p>
+    </div>
+    
+</body>
+</html>
