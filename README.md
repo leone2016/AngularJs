@@ -92,7 +92,7 @@ $http.get('data.json')
 * clase 41
     * ngTouch
 * clase 46 
-    *  $q ejecuta procesos ascincronos, es necesario retornarlo
+    *  $q.defer: promesa diferido -> ejecuta procesos ascincronos, es necesario retornarlo
     * .promise.then( resolve(), reject()  )      
 # Documentation
 
